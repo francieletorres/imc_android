@@ -31,16 +31,8 @@
 
 	<LinearLayout
 		android:id="@+id/layoutPeso"
-		android:padding="@dimen/padding"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		android:background="@drawable/backgdefault"
-		android:elevation="4dp"
-		android:layout_marginBottom="@dimen/layoutMarginBottom"
-		android:layout_marginTop="0dp"
-		android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
+		style="@style/linLayoutCommonProperties"
 		> 
 		
 		<TextView
@@ -79,15 +71,8 @@
 
 	<LinearLayout
 		android:id="@+id/layoutAltura"
-		android:padding="@dimen/padding"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		android:background="@drawable/backgdefault"
-		android:elevation="4dp"
-		android:layout_marginBottom="@dimen/layoutMarginBottom"
-		android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
+		style="@style/linLayoutCommonProperties"
 		>
 
 		<TextView
@@ -143,15 +128,8 @@
 
 	<LinearLayout
 		android:id="@+id/layoutIMC"
-		android:padding="@dimen/padding"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
 		android:orientation="vertical"
-		android:background="@drawable/backgdefault"
-		android:elevation="4dp"
-		android:layout_marginBottom="@dimen/layoutMarginBottom"
-		android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
+		style="@style/linLayoutCommonProperties"
 		>
 
 			<TextView
