@@ -45,7 +45,7 @@
 		
 		<TextView
 			android:id="@+id/tvPeso"
-			android:text="Peso (Kg):"
+			android:text="@string/sPeso"
 			android:textSize="@dimen/text_title"
 			android:textColor="@color/tvTextColor"
 			android:background="@drawable/backginvert"
@@ -92,7 +92,7 @@
 
 		<TextView
 			android:id="@+id/tvAltura"
-			android:text="Altura (m):"
+			android:text="@string/sAltura"
 			android:textSize="@dimen/text_title"
 			android:textColor="@color/tvTextColor"
 			android:background="@drawable/backginvert"
@@ -125,7 +125,7 @@
 
 	<Button
 		android:id="@+id/btCalcular"
-		android:text="Calcular"
+		android:text="@string/sCalcular"
 		android:textFontWeight="500"
 		android:gravity="center"
 		android:textSize="@dimen/text_title"
@@ -156,7 +156,7 @@
 
 			<TextView
 				android:id="@+id/tvIMC"
-				android:text="IMC(Kg/m^2):"
+				android:text="@string/sIMC"
 				android:textSize="@dimen/text_title"
 				android:textColor="@color/tvTextColor"
 				android:background="@drawable/backginvert"
