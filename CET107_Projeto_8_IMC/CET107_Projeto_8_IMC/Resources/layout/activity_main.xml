@@ -49,9 +49,48 @@
 			android:layout_marginLeft="5dp"
 			android:layout_marginRight="5dp"
 			/>
+		
+	</LinearLayout>
 
-		
-		
+	<LinearLayout
+		android:id="@+id/layoutAltura"
+		android:padding="10dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="@drawable/backgdefault"
+		android:elevation="4dp"
+		android:layout_margin="6dp">
+
+		<TextView
+			android:id="@+id/tvAltura"
+			android:text="Altura (m):"
+			android:textSize="25sp"
+			android:textColor="#FFF"
+			android:background="@drawable/backginvert"
+			android:padding="10dp"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="5dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+		/>
+
+		<EditText
+			android:id="@+id/etAltura"
+			android:inputType="numberDecimal"
+			android:textSize="25sp"
+			android:textColor="#42BD65"
+			android:background="@drawable/backgdefault"
+			android:padding="10dp"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="5dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+		/>
 	</LinearLayout>
 
 </LinearLayout>
