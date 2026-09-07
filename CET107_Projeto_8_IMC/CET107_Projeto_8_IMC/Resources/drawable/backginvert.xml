@@ -5,16 +5,16 @@
 
 	<!-- <solid android:color="#42BD65" /> -->
 	<gradient android:angle="270"
-			  android:startColor="#6FD68A"
-			  android:centerColor="#42BD65"
-			  android:endColor="#2E8B57"/>
+			  android:startColor="@color/colorPrimaryLight"
+			  android:centerColor="@color/colorPrimary"
+			  android:endColor="@color/colorPrimaryDark"/>
 
 
 	<corners android:radius="10dp" />
 
 	<!-- borda -->
 	<stroke android:width="2dp"
-			android:color="#2E8B57" />
+			android:color="@color/colorPrimaryDark" />
 
 	<padding android:left="10dp"
 			 android:top="10dp"

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<color name="colorPrimary">#42BD65</color>
+	<color name="colorPrimaryDark">#42BD65</color>
+	<color name="colorPrimaryLight">#6FD68A</color>
+	<color name="colorAccent">#42BD65</color>
+
+	<!-- Background App-->
+	<color name="containerBackgColor">#FFF</color>
+		
+	<!-- Cor dos textViews-->
+	<color name="tvTextColor">#FFF</color>
+	<color name="tvBackgColor">@color/colorPrimary</color>	
+	
+	<!-- Cor dos EditText-->
+	<color name="etTextColor">@color/colorPrimary</color>
+	<color name="etBackgColor">#FFF</color>
+
+	<!-- Cor dos Botões-->
+	<color name="btTextColor">#FFF</color>
+	<color name="btBackgColor">@color/colorPrimary</color>	
+	
+</resources>

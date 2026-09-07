@@ -3,13 +3,13 @@
 	   xmlns:android="http://schemas.android.com/apk/res/android"
 		android:shape="rectangle">
 	
-	<solid android:color="#FFF" />
+	<solid android:color="@color/etBackgColor" />
 
 	<corners android:radius="10dp" />
 
 	<!-- borda -->
 	<stroke android:width="2dp"
-			android:color="#42BD65" />
+			android:color="@color/colorPrimary" />
 
 	<padding android:left="10dp"
 			 android:top="10dp"
