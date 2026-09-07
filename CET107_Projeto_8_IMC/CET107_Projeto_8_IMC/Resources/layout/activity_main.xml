@@ -10,6 +10,25 @@
 	android:padding="0dp">
 
 
+		<android.widget.Toolbar
+			android:id="@+id/topBar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#42BD65"
+			android:padding="0dp"
+			android:layout_marginBottom="@dimen/layoutMarginBottom"
+			> 
+			
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/app_name2"
+				android:textColor="@android:color/white"
+				android:textSize="@dimen/text_toolbar"
+				android:gravity="center"
+				/>
+			</android.widget.Toolbar>
+
 	<LinearLayout
 		android:id="@+id/layoutPeso"
 		android:padding="@dimen/padding"

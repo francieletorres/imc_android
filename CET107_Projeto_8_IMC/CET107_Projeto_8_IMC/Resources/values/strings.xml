@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CET107_Projeto_8_IMC</string>
+    <string name="app_name2">App IMC CET107 - V02</string>
     <string name="app_text">Hello, Android!</string>
 </resources>
