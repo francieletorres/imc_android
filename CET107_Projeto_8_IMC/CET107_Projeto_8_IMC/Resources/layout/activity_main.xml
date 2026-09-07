@@ -34,12 +34,22 @@
 			android:layout_marginLeft="5dp"
 			android:layout_marginRight="5dp"
 			/>
-		
-		
-		
-		
-		
-		
+
+		<EditText
+			android:id="@+id/etPeso"
+			android:inputType="numberDecimal"
+			android:textSize="25sp"
+			android:textColor="#42BD65"
+			android:background="@drawable/backgdefault"
+			android:padding="10dp"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="5dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			/>
+
 		
 		
 	</LinearLayout>
