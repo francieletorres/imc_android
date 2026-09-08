@@ -38,33 +38,17 @@
 		<TextView
 			android:id="@+id/tvPeso"
 			android:text="@string/sPeso"
-			android:textSize="@dimen/text_title"
-			android:textColor="@color/tvTextColor"
-			android:background="@drawable/backginvert"
-			android:padding="10dp"
 			android:layout_width="0dp"
 			android:layout_weight="6"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="5dp"
-			android:layout_marginTop="5dp"
-			android:layout_marginLeft="0dp"
-			android:layout_marginRight="5dp"
+			style="@style/tvCommonProperties"
 			/>
 
 		<EditText
 			android:id="@+id/etPeso"
 			android:inputType="numberDecimal"
-			android:textSize="@dimen/text_title"
-			android:textColor="@color/etTextColor"
-			android:background="@drawable/backgdefault"
-			android:padding="10dp"
 			android:layout_width="0dp"
 			android:layout_weight="4"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="5dp"
-			android:layout_marginTop="5dp"
-			android:layout_marginLeft="0dp"
-			android:layout_marginRight="0dp"
+			style="@style/etCommonProperties"
 			/>
 		
 	</LinearLayout>
@@ -78,52 +62,24 @@
 		<TextView
 			android:id="@+id/tvAltura"
 			android:text="@string/sAltura"
-			android:textSize="@dimen/text_title"
-			android:textColor="@color/tvTextColor"
-			android:background="@drawable/backginvert"
-			android:padding="10dp"
 			android:layout_width="0dp"
 			android:layout_weight="6"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="5dp"
-			android:layout_marginTop="5dp"
-			android:layout_marginLeft="0dp"
-			android:layout_marginRight="5dp"
+			style="@style/tvCommonProperties"
 		/>
 
 		<EditText
 			android:id="@+id/etAltura"
 			android:inputType="numberDecimal"
-			android:textSize="@dimen/text_title"
-			android:textColor="@color/etTextColor"
-			android:background="@drawable/backgdefault"
-			android:padding="10dp"
 			android:layout_width="0dp"
 			android:layout_weight="4"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="5dp"
-			android:layout_marginTop="5dp"
-			android:layout_marginLeft="0dp"
-			android:layout_marginRight="0dp"
+			style="@style/etCommonProperties"
 		/>
 	</LinearLayout>
 
 	<Button
 		android:id="@+id/btCalcular"
 		android:text="@string/sCalcular"
-		android:textFontWeight="500"
-		android:gravity="center"
-		android:textSize="@dimen/text_title"
-		android:textColor="@color/btTextColor"
-		android:background="@drawable/backginvert"
-		android:padding="20dp"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/layoutMarginBottom"
-		android:layout_marginTop="0dp"
-		android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
-		android:elevation="4dp"
+		style="@style/btCommonProperties"
 	/>
 
 	<LinearLayout
@@ -135,16 +91,8 @@
 			<TextView
 				android:id="@+id/tvIMC"
 				android:text="@string/sIMC"
-				android:textSize="@dimen/text_title"
-				android:textColor="@color/tvTextColor"
-				android:background="@drawable/backginvert"
-				android:padding="10dp"
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginBottom="5dp"
-				android:layout_marginTop="5dp"
-				android:layout_marginLeft="0dp"
-				android:layout_marginRight="5dp"
+				style="@style/tvCommonProperties"
 		/>
 
 			<EditText
@@ -155,16 +103,8 @@
 				android:focusable="false"
 				android:focusableInTouchMode="false"
 				android:clickable="false"
-				android:textSize="@dimen/text_title"
-				android:textColor="@color/etTextColor"
-				android:background="@drawable/backgdefault"
-				android:padding="10dp"
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginBottom="5dp"
-				android:layout_marginTop="5dp"
-				android:layout_marginLeft="0dp"
-				android:layout_marginRight="0dp"
+				style="@style/etCommonProperties"
 		/>
 		</LinearLayout>
 
