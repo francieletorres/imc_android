@@ -50,6 +50,8 @@ namespace CET107_Projeto_8_IMC
                             {
                                 //imc = peso / (altura * altura);
                                 imc = peso / Math.Pow(altura, 2);
+                                string resultado = ProcessaResultado(imc);
+                                MostraMensagem(resultado);
                                 etIMCC.Text = imc.ToString("F2",
                                     System.Globalization.CultureInfo.InvariantCulture);
                             }
@@ -127,8 +129,69 @@ namespace CET107_Projeto_8_IMC
                 etPesoC.Text = string.Empty;
                 etAlturaC.Text = string.Empty;
                 etIMCC.Text = string.Empty;
+                etPesoC.RequestFocus();
             };
                     
+        }
+
+        //Método processa resultado
+
+         private string ProcessaResultado(double imc)
+        {
+            string mensagem = string.Empty;
+            
+            if(imc < 16.9)
+            {
+                mensagem = "Desnutrido.";
+            }
+            else if (imc < 18.5)
+            {
+                mensagem = "Abaixo do peso.";
+            }
+            else if (imc >= 18.5 && imc < 25)
+            {
+                mensagem = "Peso normal";
+            }
+            else if (imc >= 25 && imc < 30)
+            {
+                mensagem = "Acima do peso";
+            }
+            else if(imc >= 30 && imc < 35 )
+            {
+                mensagem = "Obesidade grau I.";
+            }
+            else if(imc >= 35 && imc < 40)
+            {
+                mensagem = "Obesidade grau II.";
+            }
+            else
+            {
+                mensagem = "Obesidade grau III.";
+            }
+
+            return mensagem;
+        }
+
+        private void MostraMensagem(string mensagem)
+        {
+            //exibir alert
+
+            //Declaracao do builder da caixa de dialogo para exibir mensagem
+            Android.App.AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            //Configuracao do título, mensagem e botão de ação da caixa de diálogo
+            builder.SetTitle("Resultado do IMC");
+            builder.SetMessage(mensagem);
+
+            //Configuracao do botao de ação OK 
+            builder.SetPositiveButton("OK", (sender, args) => {
+                
+                //Inserir código adicional aqui, se necessário para tratar o clique no botão "OK"
+
+            });
+
+            Android.App.AlertDialog dialog = builder.Create();
+            dialog.Show();
         }
     }
 }
