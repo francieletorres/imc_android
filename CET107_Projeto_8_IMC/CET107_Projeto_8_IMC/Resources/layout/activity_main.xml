@@ -82,6 +82,12 @@
 		style="@style/btCommonProperties"
 	/>
 
+	<Button
+		android:id="@+id/btLimpar"
+		android:text="@string/sLimpar"
+		style="@style/btCommonProperties"
+	/>
+
 	<LinearLayout
 		android:id="@+id/layoutIMC"
 		android:orientation="vertical"

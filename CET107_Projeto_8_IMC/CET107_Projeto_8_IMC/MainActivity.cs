@@ -24,6 +24,7 @@ namespace CET107_Projeto_8_IMC
             etAlturaC = FindViewById<EditText>(Resource.Id.etAltura);
             etIMCC = FindViewById<EditText>(Resource.Id.etIMC);
             Button btCalcularC = FindViewById<Button>(Resource.Id.btCalcular);
+            Button btLimparC = FindViewById<Button>(Resource.Id.btLimpar);
 
             btCalcularC.Click += delegate
             {
@@ -120,6 +121,14 @@ namespace CET107_Projeto_8_IMC
 
                 }
             };
+
+            btLimparC.Click += delegate
+            {
+                etPesoC.Text = string.Empty;
+                etAlturaC.Text = string.Empty;
+                etIMCC.Text = string.Empty;
+            };
+                    
         }
     }
 }
