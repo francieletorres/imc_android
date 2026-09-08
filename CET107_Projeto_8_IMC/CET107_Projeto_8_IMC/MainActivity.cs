@@ -9,10 +9,10 @@ namespace CET107_Projeto_8_IMC
         //atributos ou variáveis 
 
         //Entradas
-        EditText etPesoC, etAlturaC;
+        EditText? etPesoC = null, etAlturaC = null;
 
         //Saídas
-        EditText etIMCC;
+        EditText? etIMCC = null;
 
         protected override void OnCreate(Bundle? savedInstanceState)
         {
@@ -20,24 +20,37 @@ namespace CET107_Projeto_8_IMC
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-            etPesoC = FindViewById<EditText>(Resource.Id.etPeso);
-            etAlturaC = FindViewById<EditText>(Resource.Id.etAltura);
-            etIMCC = FindViewById<EditText>(Resource.Id.etIMC);
-            Button btCalcularC = FindViewById<Button>(Resource.Id.btCalcular);
-            Button btLimparC = FindViewById<Button>(Resource.Id.btLimpar);
 
-            btCalcularC.Click += delegate
+            etPesoC = FindViewById<EditText>(Resource.Id.etPeso)!;
+            etAlturaC = FindViewById<EditText>(Resource.Id.etAltura)!;
+            etIMCC = FindViewById<EditText>(Resource.Id.etIMC)!;
+            Button? btCalcularC = FindViewById<Button>(Resource.Id.btCalcular)!;
+            Button? btLimparC = FindViewById<Button>(Resource.Id.btLimpar)!;
+
+            btCalcularC!.Click += delegate
             {
-                if(!string.IsNullOrEmpty(etPesoC.Text) && !string.IsNullOrEmpty(etAlturaC.Text))
+                /*
+                if (etPesoC == null || etAlturaC == null || etIMCC == null)
+                {
+                    Toast.MakeText(this, "UI not inicializado.", ToastLength.Long).Show();
+                    return;
+                }
+
+                var pesoCtrl = etPesoC;
+                var alturaCtrl = etAlturaC;
+                var imcCtrl = etIMCC;
+                */
+
+                if (!string.IsNullOrEmpty(etPesoC!.Text) && !string.IsNullOrEmpty(etAlturaC!.Text))
                 {
                     double peso = 0, altura = 0, imc = 0;
 
-                    bool pesoValido = double.TryParse(etPesoC.Text,
+                    bool pesoValido = double.TryParse(etPesoC!.Text,
                         System.Globalization.NumberStyles.Float,
                         System.Globalization.CultureInfo.InvariantCulture,
                         out peso);
 
-                    bool alturaValida = double.TryParse(etAlturaC.Text,
+                    bool alturaValida = double.TryParse(etAlturaC!.Text,
                     System.Globalization.NumberStyles.Float,
                     System.Globalization.CultureInfo.InvariantCulture,
                     out altura);
@@ -52,7 +65,7 @@ namespace CET107_Projeto_8_IMC
                                 imc = peso / Math.Pow(altura, 2);
                                 string resultado = ProcessaResultado(imc);
                                 MostraMensagem(resultado);
-                                etIMCC.Text = imc.ToString("F2",
+                                etIMCC!.Text = imc.ToString("F2",
                                     System.Globalization.CultureInfo.InvariantCulture);
                             }
                             else
@@ -70,15 +83,18 @@ namespace CET107_Projeto_8_IMC
                                 {
                                     mensagem = "Altura deve ser um valor positivo.";
                                 }
-
+#pragma warning disable CS8602
                                 Toast.MakeText(this, mensagem, ToastLength.Long).Show();
-                                etIMCC.Text = "Valores inválidos!";
+#pragma warning disable CS8602
+                                etIMCC!.Text = "Valores inválidos!";
                             }
                         }
                         else
                         {
+#pragma warning disable CS8602
                             Toast.MakeText(this, "Altura não pode ser zero.", ToastLength.Long).Show();
-                            etIMCC.Text = "Erro: Altura zero.";
+#pragma warning disable CS8602
+                            etIMCC!.Text = "Erro: Altura zero.";
                         }
                     }
                     else
@@ -96,9 +112,10 @@ namespace CET107_Projeto_8_IMC
                         {
                             mensagem = "Valor numérico inválido para altura.";
                         }
-
+#pragma warning disable CS8602
                         Toast.MakeText(this, mensagem,ToastLength.Long).Show();
-                        etIMCC.Text = "Valores inválidos!";
+#pragma warning disable CS8602
+                        etIMCC!.Text = "Valores inválidos!";
                     }
                 }
                 else
@@ -117,19 +134,30 @@ namespace CET107_Projeto_8_IMC
                     {
                         mensagem = "Por favor, preencha o campo de altura.";
                     }
-
+#pragma warning disable CS8602
                     Toast.MakeText(this,mensagem, ToastLength.Long).Show();
-                    etIMCC.Text = "Sem valores!";
+#pragma warning disable CS8602
+                    etIMCC!.Text = "Sem valores!";
 
                 }
             };
 
-            btLimparC.Click += delegate
+            btLimparC!.Click += delegate
             {
-                etPesoC.Text = string.Empty;
-                etAlturaC.Text = string.Empty;
-                etIMCC.Text = string.Empty;
-                etPesoC.RequestFocus();
+
+                if (etPesoC == null || etAlturaC == null || etIMCC == null)
+                {
+#pragma warning disable CS8602
+                    Toast.MakeText(this, "UI not inicializado", ToastLength.Long).Show();
+#pragma warning disable CS8602
+                }
+                else
+                {
+                    etPesoC!.Text = string.Empty;
+                    etAlturaC!.Text = string.Empty;
+                    etIMCC!.Text = string.Empty;
+                    etPesoC!.RequestFocus();
+                }
             };
                     
         }
@@ -190,8 +218,8 @@ namespace CET107_Projeto_8_IMC
 
             });
 
-            Android.App.AlertDialog dialog = builder.Create();
-            dialog.Show();
+            Android.App.AlertDialog? dialog = builder.Create();
+            dialog!.Show();
         }
     }
 }
